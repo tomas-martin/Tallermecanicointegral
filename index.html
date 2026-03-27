@@ -409,10 +409,58 @@
       border-top: 1px solid var(--border);
     }
 
+    /* Sub-secciones dentro de trabajos */
+    .trabajos-subsection {
+      margin-top: 72px;
+    }
+    .trabajos-subsection + .trabajos-subsection {
+      margin-top: 88px;
+      padding-top: 72px;
+      border-top: 1px solid var(--border);
+    }
+    .trabajos-sub-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+    .trabajos-sub-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      letter-spacing: 0.05em;
+      color: var(--white);
+      line-height: 1;
+    }
+    .trabajos-sub-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 340px;
+      line-height: 1.6;
+    }
+    .trabajos-sub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .trabajos-sub-badge::before {
+      content: '';
+      display: block;
+      width: 16px; height: 1px;
+      background: var(--red);
+    }
+
     .carousel-wrapper {
       position: relative;
       overflow: hidden;
-      margin-top: 56px;
+      margin-top: 32px;
     }
 
     .carousel-track {
@@ -1257,75 +1305,133 @@
   <!-- ══ TRABAJOS ══ -->
   <section id="trabajos">
     <div class="section-inner">
+
+      <!-- Encabezado principal de sección -->
       <div class="reveal">
         <div class="section-label">Galería</div>
         <h2 class="section-title">Nuestros Trabajos</h2>
         <p class="section-desc">Una muestra de los trabajos realizados en nuestro taller. Calidad y precisión en cada detalle.</p>
       </div>
 
-      <div class="carousel-wrapper reveal">
-        <div class="carousel-track" id="carouselTrack">
-
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1590393802688-9a9bfe7bff75?w=800&q=80" alt="Trabajo en tren delantero" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Tren Delantero</div>
-              <div>Reparación y ajuste de dirección</div>
-            </div>
+      <!-- ── Sub-sección 1: Mecánica en General ── -->
+      <div class="trabajos-subsection reveal">
+        <div class="trabajos-sub-header">
+          <div>
+            <div class="trabajos-sub-badge">Categoría 01</div>
+            <h3 class="trabajos-sub-title">Mecánica en General</h3>
           </div>
+          <p class="trabajos-sub-desc">Trabajos de amortiguación, tren delantero, scanner y electricidad automotriz.</p>
+        </div>
 
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Scanner computarizado" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Diagnóstico</div>
-              <div>Scanner computarizado</div>
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrackA">
+
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1590393802688-9a9bfe7bff75?w=800&q=80" alt="Trabajo en tren delantero" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Tren Delantero</div>
+                <div>Reparación y ajuste de dirección</div>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Amortiguadores" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Amortiguación</div>
-              <div>Cambio y regulación de amortiguadores</div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Scanner computarizado" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Diagnóstico</div>
+                <div>Scanner computarizado</div>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1613214049841-028981a2eb71?w=800&q=80" alt="Ganchera instalada" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Accesorios</div>
-              <div>Instalación de ganchera</div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" alt="Amortiguadores" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Amortiguación</div>
+                <div>Cambio y regulación de amortiguadores</div>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Electricidad automotriz" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Electricidad</div>
-              <div>Sistema eléctrico automotriz</div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Electricidad automotriz" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Electricidad</div>
+                <div>Sistema eléctrico automotriz</div>
+              </div>
             </div>
-          </div>
 
-          <div class="carousel-slide">
-            <img src="https://images.unsplash.com/photo-1611967164521-abae8fba4668?w=800&q=80" alt="Parrilla portaequipajes" loading="lazy" />
-            <div class="carousel-slide-caption">
-              <div class="cap-tag">Accesorios</div>
-              <div>Parrilla portaequipajes a medida</div>
-            </div>
           </div>
+        </div>
 
+        <div class="carousel-controls">
+          <div class="carousel-dots" id="carouselDotsA"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" id="carouselPrevA" aria-label="Anterior">
+              <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="carousel-arrow" id="carouselNextA" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="carousel-controls">
-        <div class="carousel-dots" id="carouselDots"></div>
-        <div class="carousel-arrows">
-          <button class="carousel-arrow" id="carouselPrev" aria-label="Anterior">
-            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-          </button>
-          <button class="carousel-arrow" id="carouselNext" aria-label="Siguiente">
-            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-          </button>
+      <!-- ── Sub-sección 2: Venta y Colocación ── -->
+      <div class="trabajos-subsection reveal">
+        <div class="trabajos-sub-header">
+          <div>
+            <div class="trabajos-sub-badge">Categoría 02</div>
+            <h3 class="trabajos-sub-title">Venta y Colocación</h3>
+          </div>
+          <p class="trabajos-sub-desc">Instalación de gancheras, estribos, parrillas y portaequipajes a medida.</p>
+        </div>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrackB">
+
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1613214049841-028981a2eb71?w=800&q=80" alt="Ganchera instalada" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Ganchera</div>
+                <div>Instalación de ganchera trasera</div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1611967164521-abae8fba4668?w=800&q=80" alt="Parrilla portaequipajes" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Portaequipajes</div>
+                <div>Parrilla portaequipajes a medida</div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&q=80" alt="Estribo lateral" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Estribos</div>
+                <div>Colocación de estribos laterales</div>
+              </div>
+            </div>
+
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=800&q=80" alt="Accesorios 4x4" loading="lazy" />
+              <div class="carousel-slide-caption">
+                <div class="cap-tag">Accesorios</div>
+                <div>Equipamiento 4x4 a medida</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <div class="carousel-dots" id="carouselDotsB"></div>
+          <div class="carousel-arrows">
+            <button class="carousel-arrow" id="carouselPrevB" aria-label="Anterior">
+              <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="carousel-arrow" id="carouselNextB" aria-label="Siguiente">
+              <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -1592,19 +1698,18 @@
       });
     }, { passive: true });
 
-    // ── CAROUSEL ──
-    (function () {
-      const track = document.getElementById('carouselTrack');
-      const dotsContainer = document.getElementById('carouselDots');
-      const prevBtn = document.getElementById('carouselPrev');
-      const nextBtn = document.getElementById('carouselNext');
+    // ── CAROUSEL (función reutilizable para múltiples instancias) ──
+    function initCarousel({ trackId, dotsId, prevId, nextId }) {
+      const track = document.getElementById(trackId);
+      const dotsContainer = document.getElementById(dotsId);
+      const prevBtn = document.getElementById(prevId);
+      const nextBtn = document.getElementById(nextId);
 
       if (!track) return;
 
       const slides = track.querySelectorAll('.carousel-slide');
       const totalSlides = slides.length;
 
-      // Determine visible slides based on screen width
       function getVisible() {
         if (window.innerWidth <= 600) return 1;
         if (window.innerWidth <= 900) return 2;
@@ -1615,7 +1720,6 @@
       let visible = getVisible();
       const maxIndex = () => totalSlides - visible;
 
-      // Build dots
       function buildDots() {
         dotsContainer.innerHTML = '';
         const count = maxIndex() + 1;
@@ -1637,9 +1741,9 @@
       function goTo(index) {
         visible = getVisible();
         current = Math.max(0, Math.min(index, maxIndex()));
-        const slideWidth = slides[0].offsetWidth + 18; // width + margin
+        const slideWidth = slides[0].offsetWidth + 18;
         if (window.innerWidth <= 600) {
-          track.style.transform = `translateX(calc(-${current * 100}% ))`;
+          track.style.transform = `translateX(calc(-${current * 100}%))`;
         } else {
           track.style.transform = `translateX(-${current * slideWidth}px)`;
         }
@@ -1649,14 +1753,12 @@
       prevBtn.addEventListener('click', () => goTo(current - 1));
       nextBtn.addEventListener('click', () => goTo(current + 1));
 
-      // Auto-advance
       let autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 4500);
       track.addEventListener('mouseenter', () => clearInterval(autoTimer));
       track.addEventListener('mouseleave', () => {
         autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 4500);
       });
 
-      // Touch/swipe support
       let touchStartX = 0;
       track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
       track.addEventListener('touchend', e => {
@@ -1664,7 +1766,6 @@
         if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
       });
 
-      // Rebuild on resize
       let resizeTimer;
       window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
@@ -1678,7 +1779,22 @@
 
       buildDots();
       goTo(0);
-    })();
+    }
+
+    // Inicializar ambos carruseles
+    initCarousel({
+      trackId: 'carouselTrackA',
+      dotsId: 'carouselDotsA',
+      prevId: 'carouselPrevA',
+      nextId: 'carouselNextA'
+    });
+
+    initCarousel({
+      trackId: 'carouselTrackB',
+      dotsId: 'carouselDotsB',
+      prevId: 'carouselPrevB',
+      nextId: 'carouselNextB'
+    });
   </script>
 </body>
 </html>
