@@ -581,15 +581,29 @@
       .carousel-slide {
         flex: 0 0 calc(50% - 9px);
       }
+      .carousel-dots {
+        flex-wrap: wrap;
+        max-width: calc(100% - 112px);
+        row-gap: 6px;
+      }
     }
 
     @media (max-width: 600px) {
       .carousel-slide {
-        flex: 0 0 calc(100% - 0px);
+        flex: 0 0 100%;
         margin-right: 0;
+        height: 260px;
       }
       .carousel-track {
         gap: 0;
+      }
+      .carousel-dots {
+        flex-wrap: wrap;
+        max-width: calc(100% - 104px);
+        row-gap: 6px;
+      }
+      .carousel-controls {
+        align-items: flex-start;
       }
     }
 
@@ -1751,12 +1765,8 @@
       function goTo(index) {
         visible = getVisible();
         current = Math.max(0, Math.min(index, maxIndex()));
-        const slideWidth = slides[0].offsetWidth + 18;
-        if (window.innerWidth <= 600) {
-          track.style.transform = `translateX(calc(-${current * 100}%))`;
-        } else {
-          track.style.transform = `translateX(-${current * slideWidth}px)`;
-        }
+        const slideWidth = slides[0].offsetWidth + (window.innerWidth <= 600 ? 0 : 18);
+        track.style.transform = `translateX(-${current * slideWidth}px)`;
         updateDots();
       }
 
